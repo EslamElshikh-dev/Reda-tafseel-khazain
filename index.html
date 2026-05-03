@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رضا لخدمات تفصيل الخزائن والموبيليا | نجار بالرياض</title>
+    
+    <meta name="description" content="نحن في 'رضا لخدمات تفصيل الخزائن والموبيليا' نقدم حلولاً مبتكرة وعملية لجميع احتياجاتك من النجارة وتفصيل الأثاث في مدينة الرياض. بفضل خبرتنا الواسعة كنجارين محترفين، نضمن لك جودة عالية، دقة في التنفيذ، وتصاميم عصرية تناسب ذوقك وتلبي متطلبات مساحتك. التزامنا هو تقديم خدمات احترافية بأسعار تنافسية تجعل رؤيتك واقعاً ملموساً.">
+    <meta property="og:title" content="رضا لخدمات تفصيل الخزائن والموبيليا">
+    <meta property="og:description" content="نحن في 'رضا لخدمات تفصيل الخزائن والموبيليا' نقدم حلولاً مبتكرة وعملية لجميع احتياجاتك من النجارة وتفصيل الأثاث في مدينة الرياض.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://reda-tfsellkhazain.com">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ServiceAreaBusiness",
+      "name": "رضا لخدمات تفصيل الخزائن والموبيليا",
+      "image": "https://reda-tfsellkhazain.com/logo.png",
+      "@id": "https://reda-tfsellkhazain.com",
+      "url": "https://reda-tfsellkhazain.com",
+      "telephone": "+966577343816",
+      "email": "samwelhanna7@gmail.com",
+      "areaServed": {
+        "@type": "City",
+        "name": "Riyadh",
+        "addressCountry": "SA"
+      },
+      "description": "خدمات نجارة وتفصيل خزائن وموبيليا احترافية في الرياض. دقة، جودة، وضمان.",
+      "sameAs": [
+        "https://wa.me/966577343816"
+      ]
+    }
+    </script>
+
+    <style>
+        /* CSS Variables */
+        :root {
+            --primary-color: #8B5A2B; /* Wood Brown */
+            --secondary-color: #D2B48C; /* Tan */
+            --accent-color: #A0522D; /* Sienna */
+            --bg-color: #FDFBF7;
+            --text-color: #333333;
+            --card-bg: #FFFFFF;
+            --nav-bg: #FFFFFF;
+            --shadow: 0 4px 15px rgba(0,0,0,0.08);
+            --transition: all 0.3s ease;
+        }
+
+        [data-theme="dark"] {
+            --primary-color: #D2B48C;
+            --secondary-color: #8B5A2B;
+            --accent-color: #CD853F;
+            --bg-color: #1A1A1A;
+            --text-color: #F0F0F0;
+            --card-bg: #2A2A2A;
+            --nav-bg: #222222;
+            --shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: var(--transition);
+            line-height: 1.6;
+            padding-bottom: 70px; /* Space for bottom nav */
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            padding: 15px 5%;
+            box-shadow: var(--shadow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-weight: 800;
+        }
+
+        .header-controls {
+            display: flex;
+            gap: 15px;
+        }
+
+        .icon-btn {
+            background-color: var(--bg-color);
+            border: 1px solid var(--secondary-color);
+            color: var(--text-color);
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+        
+        .icon-btn:hover {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-top: 15px;
+            color: var(--text-color);
+            opacity: 0.9;
+        }
+
+        /* Features Section */
+        .section-title {
+            text-align: center;
+            margin: 40px 0 20px;
+            color: var(--primary-color);
+            font-size: 2rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px 5%;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px 5%;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(139, 90, 43, 0.2);
+        }
+
+        .service-icon-wrapper {
+            width: 80px;
+            height: 80px;
+            background-color: var(--bg-color);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .service-icon-wrapper i {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-color);
+            transform: scale(1.05);
+        }
+
+        /* Map & Contact */
+        .map-container {
+            padding: 20px 5%;
+            margin-bottom: 20px;
+        }
+        
+        .map-wrapper {
+            border-radius: 20px;
+            overflow: hidden;
+            border: 2px solid var(--secondary-color);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-section {
+            padding: 40px 5%;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .contact-form {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid var(--secondary-color);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-size: 1rem;
+        }
+
+        /* Floating Widgets */
+        .floating-wa, .floating-call {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: #fff;
+            box-shadow: var(--shadow);
+            z-index: 999;
+            transition: var(--transition);
+            bottom: 90px;
+        }
+
+        .floating-wa { background-color: #25d366; right: 20px; }
+        .floating-call { background-color: var(--primary-color); right: 90px; }
+        
+        .floating-wa:hover, .floating-call:hover { transform: scale(1.1); }
+
+        [dir="ltr"] .floating-wa { right: auto; left: 20px; }
+        [dir="ltr"] .floating-call { right: auto; left: 90px; }
+
+        /* Bottom Nav Bar (Mobile) */
+        .bottom-nav {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: var(--nav-bg);
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            border-radius: 25px 25px 0 0;
+            z-index: 1000;
+            padding: 10px 20px;
+            justify-content: space-between;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: var(--transition);
+        }
+
+        .nav-item .icon-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+            border: 1px solid var(--secondary-color);
+        }
+
+        .nav-item:hover .icon-circle {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .bottom-nav { display: flex; }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-up {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1 data-i18n="site_name">رضا لخدمات تفصيل الخزائن والموبيليا</h1>
+        </div>
+        <div class="header-controls">
+            <button class="icon-btn" id="theme-toggle" title="تغيير المظهر">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="icon-btn" id="lang-toggle" title="Change Language">
+                <i class="fas fa-globe"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero animate-up" id="home">
+        <h2 data-i18n="site_name" style="color: var(--primary-color); margin-bottom: 10px;">رضا لخدمات تفصيل الخزائن والموبيليا</h2>
+        <p data-i18n="hero_desc">نحن في 'رضا لخدمات تفصيل الخزائن والموبيليا' نقدم حلولاً مبتكرة وعملية لجميع احتياجاتك من النجارة وتفصيل الأثاث في مدينة الرياض. بفضل خبرتنا الواسعة كنجارين محترفين، نضمن لك جودة عالية، دقة في التنفيذ، وتصاميم عصرية تناسب ذوقك وتلبي متطلبات مساحتك. من تفصيل غرف النوم والخزائن إلى صيانة الموبيليا، نحن ملتزمون بتقديم خدمات احترافية بأسعار تنافسية تلبي تطلعاتك وتجعل رؤيتك واقعاً ملموساً.</p>
+    </section>
+
+    <h2 class="section-title animate-up" data-i18n="why_choose_us">لماذا تختار رضا لخدمات تفصيل الخزائن والموبيليا ؟</h2>
+    <div class="features-grid" id="features-container">
+        </div>
+
+    <h2 class="section-title animate-up" id="services" data-i18n="our_services">خدماتنا</h2>
+    <div class="services-grid" id="services-container">
+        </div>
+
+    <h2 class="section-title animate-up" data-i18n="service_area">نطاق خدمتنا: الرياض</h2>
+    <div class="map-container animate-up">
+        <div class="map-wrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d463877.3124118536!2d46.9317540248405!3d24.72545537350757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2z2KfZhNix2YrYp9i2!5e0!3m2!1sar!2ssa!4v1714300000000!5m2!1sar!2ssa" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <section class="contact-section animate-up" id="contact">
+        <h2 class="section-title" data-i18n="contact_us">تواصل معنا</h2>
+        <form class="contact-form" id="contactForm">
+            <div class="form-group">
+                <input type="text" id="custName" data-i18n-placeholder="name" placeholder="الإسم" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" id="custPhone" data-i18n-placeholder="phone" placeholder="رقم الجوال" required>
+            </div>
+            <div class="form-group">
+                <select id="custService" required>
+                    <option value="" disabled selected data-i18n="select_service">اختر الخدمة المطلوبة</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <textarea id="custDetails" rows="4" data-i18n-placeholder="details" placeholder="تفاصيل الطلب" required></textarea>
+            </div>
+            <button type="submit" class="btn" style="width: 100%;" data-i18n="send">إرسال عبر واتساب <i class="fab fa-whatsapp"></i></button>
+        </form>
+    </section>
+
+    <a href="https://wa.me/966577343816" class="floating-wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="tel:0577343816" class="floating-call"><i class="fas fa-phone-alt"></i></a>
+
+    <nav class="bottom-nav">
+        <a href="#home" class="nav-item">
+            <div class="icon-circle"><i class="fas fa-home"></i></div>
+            <span data-i18n="home">الرئيسية</span>
+        </a>
+        <a href="#services" class="nav-item">
+            <div class="icon-circle"><i class="fas fa-tools"></i></div>
+            <span data-i18n="services">الخدمات</span>
+        </a>
+        <a href="#home" class="nav-item">
+            <div class="icon-circle"><i class="fas fa-info"></i></div>
+            <span data-i18n="about">من نحن</span>
+        </a>
+        <a href="#contact" class="nav-item">
+            <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+            <span data-i18n="contact">تواصل معنا</span>
+        </a>
+    </nav>
+
+    <script>
+        // --- Data & Translations ---
+        const WHATSAPP_NUM = "966577343816";
+
+        const i18n = {
+            ar: {
+                site_name: "رضا لخدمات تفصيل الخزائن والموبيليا",
+                hero_desc: "نحن في 'رضا لخدمات تفصيل الخزائن والموبيليا' نقدم حلولاً مبتكرة وعملية لجميع احتياجاتك من النجارة وتفصيل الأثاث في مدينة الرياض. بفضل خبرتنا الواسعة كنجارين محترفين، نضمن لك جودة عالية، دقة في التنفيذ، وتصاميم عصرية تناسب ذوقك وتلبي متطلبات مساحتك. من تفصيل غرف النوم والخزائن إلى صيانة الموبيليا، نحن ملتزمون بتقديم خدمات احترافية بأسعار تنافسية تلبي تطلعاتك وتجعل رؤيتك واقعاً ملموساً.",
+                why_choose_us: "لماذا تختار رضا لخدمات تفصيل الخزائن والموبيليا ؟",
+                our_services: "خدماتنا",
+                service_area: "نطاق خدمتنا: الرياض",
+                contact_us: "تواصل معنا",
+                order_service: "اطلب هذه الخدمة",
+                name: "الإسم",
+                phone: "رقم الجوال",
+                select_service: "اختر الخدمة المطلوبة",
+                details: "تفاصيل الطلب",
+                send: "إرسال",
+                home: "الرئيسية",
+                services: "الخدمات",
+                about: "من نحن",
+                contact: "تواصل معنا",
+                features: [
+                    { title: "دقة في التنفيذ", desc: "نهتم بأدق التفاصيل لضمان خروج العمل بأفضل صورة، مع التزام تام بالمقاييس والمواصفات المتفق عليها لتحقيق رؤيتك بدقة متناهية.", icon: "fa-bullseye" },
+                    { title: "إلتزام في مواعيد التسليم", desc: "نقدر وقتك الثمين، ولذلك نلتزم التزاماً صارماً بتسليم المشاريع في المواعيد المحددة دون أي تأخير، مع الحفاظ على أعلى معايير الجودة.", icon: "fa-clock" },
+                    { title: "جودة الخامات والأعمال", desc: "نستخدم أفضل أنواع الأخشاب والمواد في السوق، لضمان متانة وعمر افتراضي طويل لأثاثك، مع تنفيذ احترافي يعكس خبرتنا العميقة.", icon: "fa-gem" },
+                    { title: "أسعار تنافسية + ضمان", desc: "نقدم لك أفضل قيمة مقابل السعر، مع توفير ضمان شامل على جميع أعمالنا لتشعر براحة البال والثقة التامة في جودة خدماتنا المتميزة.", icon: "fa-tags" }
+                ],
+                services_list: [
+                    { title: "صيانة وتصليح النجارة والموبيليا", desc: "خدمات صيانة شاملة لإعادة الحياة لأثاثك المفضل. نستخدم أحدث التقنيات لضمان متانة تدوم طويلاً، ونعالج الخدوش والكسور ليعود أثاثك لرونقه الأصلي.", icon: "fa-wrench" },
+                    { title: "تفصيل خزائن", desc: "تصميم وتفصيل خزائن عملية وأنيقة تناسب مساحتك وتلبي احتياجات التخزين الخاصة بك. نستخدم أفضل الأخشاب والإكسسوارات لضمان جودة عالية وعمر طويل.", icon: "fa-box" },
+                    { title: "تفصيل غرف نوم", desc: "نصنع لك غرف نوم تجمع بين الراحة والفخامة. تصاميم مخصصة تعكس ذوقك الشخصي مع اهتمام فائق بجودة الخشب والتشطيبات النهائية لنوم هانئ.", icon: "fa-bed" },
+                    { title: "تفصيل غرف أطفال", desc: "غرف أطفال آمنة ومبهجة بألوان وتصاميم إبداعية تحفز خيال طفلك. نستخدم مواد غير سامة وحواف دائرية لضمان بيئة آمنة ومريحة لصغارك.", icon: "fa-child" },
+                    { title: "تفصيل غرف ملابس", desc: "دريسنج روم (Dressing Room) مصممة باحترافية لاستغلال كل زاوية. تنظيم مثالي للملابس والأحذية والإكسسوارات بتصاميم عصرية وإضاءة متناسقة.", icon: "fa-tshirt" },
+                    { title: "تفصيل دواليب وغرف تخزين", desc: "حلول تخزين ذكية وعملية للمنازل والمكاتب. دواليب قوية ومتينة بأرفف قابلة للتعديل تناسب جميع الأغراض وتساعدك على تنظيم مساحتك بفعالية.", icon: "fa-archive" },
+                    { title: "تفصيل ديكورات جدارية", desc: "لمسات خشبية فنية تحول جدران منزلك إلى تحف معمارية. تكسيات خشبية، أرفف ديكورية، وتصاميم جدارية مبتكرة تضفي الدفء والأناقة على المكان.", icon: "fa-layer-group" },
+                    { title: "تصميم وتفصيل ديكور شاشات", desc: "وحدات تلفاز وشاشات عصرية تجمع بين الجمال والوظيفة. إخفاء ذكي للكابلات، ومساحات تخزين إضافية، وتصاميم تندمج مع ديكور صالتك بسلاسة.", icon: "fa-tv" },
+                    { title: "تفصيل غرف عبايات", desc: "تصميم خاص وحصري لغرف وخزائن العبايات، مع مراعاة الطول والمساحة والتهوية، لتنظيم أنيق ومحافظة تامة على أقمشة العبايات القيمة.", icon: "fa-female" },
+                    { title: "تفصيل كافية كورنر", desc: "ركن قهوة (Coffee Corner) مصمم خصيصاً ليناسب مساحتك. أرفف للأكواب، أدراج للكبسولات، وتصميم خشبي دافئ يمنحك تجربة مقهى حقيقية في منزلك.", icon: "fa-coffee" },
+                    { title: "تفصيل موبيليا", desc: "صناعة جميع أنواع الموبيليا والقطع الفردية حسب الطلب. طاولات طعام، كراسي، كونسول، وأي قطعة أثاث تحلم بها ننفذها بدقة وحرفية عالية.", icon: "fa-chair" },
+                    { title: "تفصيل اثاث منزلي", desc: "تجهيز كامل للمنازل بأثاث متناسق وعالي الجودة. من غرف الاستقبال إلى المعيشة، نقدم حلولاً متكاملة تعكس الفخامة والرقي في كل زاوية.", icon: "fa-couch" }
+                ]
+            },
+            en: {
+                site_name: "Reda Carpentry & Furniture Services",
+                hero_desc: "We offer innovative carpentry and furniture tailoring solutions in Riyadh. With vast experience, we guarantee high quality, precision, and modern designs tailored to your space.",
+                why_choose_us: "Why Choose Us?",
+                our_services: "Our Services",
+                service_area: "Service Area: Riyadh",
+                contact_us: "Contact Us",
+                order_service: "Order this service",
+                name: "Name",
+                phone: "Phone Number",
+                select_service: "Select Service",
+                details: "Order Details",
+                send: "Send",
+                home: "Home",
+                services: "Services",
+                about: "About",
+                contact: "Contact",
+                // Note for Dev: English arrays omitted for brevity, fallback to Arabic visually or expand as needed.
+            },
+            fr: {
+                site_name: "Reda Menuiserie et Meubles",
+                hero_desc: "Nous proposons des solutions innovantes de menuiserie à Riyad. Qualité, précision et designs modernes adaptés à votre espace.",
+                why_choose_us: "Pourquoi Nous Choisir?",
+                our_services: "Nos Services",
+                service_area: "Zone de service: Riyad",
+                contact_us: "Contactez-nous",
+                order_service: "Commander ce service",
+                name: "Nom",
+                phone: "Téléphone",
+                select_service: "Choisir le service",
+                details: "Détails",
+                send: "Envoyer",
+                home: "Accueil",
+                services: "Services",
+                about: "À propos",
+                contact: "Contact"
+            }
+        };
+
+        // Current State
+        let currentLang = navigator.language.startsWith('ar') ? 'ar' : 'en';
+        let currentTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
+        // --- Core Functions ---
+        
+        function init() {
+            setTheme(currentTheme);
+            setLang(currentLang);
+            setupEventListeners();
+        }
+
+        function setTheme(theme) {
+            currentTheme = theme;
+            document.documentElement.setAttribute('data-theme', theme);
+            const icon = document.querySelector('#theme-toggle i');
+            icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+
+        function setLang(lang) {
+            currentLang = lang;
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            
+            // Translate static text
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if(i18n[lang][key]) el.innerHTML = i18n[lang][key];
+            });
+            
+            // Translate placeholders
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if(i18n[lang][key]) el.placeholder = i18n[lang][key];
+            });
+
+            renderDynamicContent(lang);
+        }
+
+        function renderDynamicContent(lang) {
+            const data = i18n[lang] || i18n['ar']; // Fallback to Arabic arrays
+            const featuresData = data.features || i18n['ar'].features;
+            const servicesData = data.services_list || i18n['ar'].services_list;
+
+            // Render Features
+            const featuresContainer = document.getElementById('features-container');
+            featuresContainer.innerHTML = featuresData.map((f, i) => `
+                <div class="feature-card animate-up" style="animation-delay: ${i * 0.1}s">
+                    <i class="fas ${f.icon} feature-icon"></i>
+                    <h3>${f.title}</h3>
+                    <p>${f.desc}</p>
+                </div>
+            `).join('');
+
+            // Render Services & Dropdown
+            const servicesContainer = document.getElementById('services-container');
+            const selectContainer = document.getElementById('custService');
+            
+            let servicesHTML = '';
+            let selectHTML = `<option value="" disabled selected>${i18n[lang].select_service || i18n['ar'].select_service}</option>`;
+
+            servicesData.forEach((s, i) => {
+                const orderText = i18n[lang].order_service || i18n['ar'].order_service;
+                const waLink = `https://wa.me/${WHATSAPP_NUM}?text=${encodeURIComponent('مرحباً، أود الاستفسار عن خدمة: ' + s.title)}`;
+                
+                servicesHTML += `
+                    <div class="service-card animate-up" style="animation-delay: ${i * 0.05}s">
+                        <div class="service-icon-wrapper">
+                            <i class="fas ${s.icon}"></i>
+                        </div>
+                        <h3>${s.title}</h3>
+                        <p>${s.desc}</p>
+                        <a href="${waLink}" target="_blank" class="btn">${orderText}</a>
+                    </div>
+                `;
+                selectHTML += `<option value="${s.title}">${s.title}</option>`;
+            });
+
+            servicesContainer.innerHTML = servicesHTML;
+            selectContainer.innerHTML = selectHTML;
+        }
+
+        function setupEventListeners() {
+            // Theme Toggle
+            document.getElementById('theme-toggle').addEventListener('click', () => {
+                setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+            });
+
+            // Lang Toggle
+            document.getElementById('lang-toggle').addEventListener('click', () => {
+                // Cycle: ar -> en -> fr -> ar
+                const nextLang = currentLang === 'ar' ? 'en' : (currentLang === 'en' ? 'fr' : 'ar');
+                setLang(nextLang);
+            });
+
+            // WhatsApp Form Submit
+            document.getElementById('contactForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('custName').value;
+                const phone = document.getElementById('custPhone').value;
+                const service = document.getElementById('custService').value;
+                const details = document.getElementById('custDetails').value;
+
+                const message = `مرحباً رضا لخدمات تفصيل الخزائن،\n\nالاسم: ${name}\nالجوال: ${phone}\nالخدمة: ${service}\nالتفاصيل: ${details}`;
+                const waUrl = `https://wa.me/${WHATSAPP_NUM}?text=${encodeURIComponent(message)}`;
+                window.open(waUrl, '_blank');
+            });
+        }
+
+        // Run Initialization
+        init();
+
+    </script>
+</body>
+</html>

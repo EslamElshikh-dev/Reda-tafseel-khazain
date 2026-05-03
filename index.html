@@ -45,9 +45,9 @@
     <style>
         /* CSS Variables */
         :root {
-            --primary-color: #8B5A2B; /* Wood Brown */
-            --secondary-color: #D2B48C; /* Tan */
-            --accent-color: #A0522D; /* Sienna */
+            --primary-color: #8B5A2B;
+            --secondary-color: #D2B48C;
+            --accent-color: #A0522D;
             --bg-color: #FDFBF7;
             --text-color: #333333;
             --card-bg: #FFFFFF;
@@ -97,8 +97,14 @@
             z-index: 1000;
         }
 
+        .logo {
+            flex-grow: 1;
+            padding-inline-end: 15px; /* Adds space between text and buttons */
+            overflow: hidden;
+        }
+
         .logo h1 {
-            font-size: 1.1rem; /* Smaller size for one line */
+            font-size: 1rem; /* Reduced size */
             color: var(--primary-color);
             font-weight: 800;
             white-space: nowrap;
@@ -108,21 +114,23 @@
 
         .header-controls {
             display: flex;
-            gap: 10px;
+            gap: 8px; /* Slightly tighter gap */
+            flex-shrink: 0;
         }
 
         .icon-btn {
             background-color: var(--bg-color);
             border: 1px solid var(--secondary-color);
             color: var(--text-color);
-            width: 35px;
-            height: 35px;
+            width: 33px; /* Reduced by ~5% */
+            height: 33px; /* Reduced by ~5% */
             border-radius: 8px;
             cursor: pointer;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 1.1rem;
+            font-size: 0.95rem; /* Reduced slightly */
+            font-weight: 700;
             transition: all 0.3s ease;
         }
         
@@ -323,7 +331,7 @@
         /* Footer */
         .site-footer {
             text-align: center;
-            padding: 20px 10px 100px; /* Space for bottom nav */
+            padding: 20px 10px 100px;
             background-color: transparent;
         }
 
@@ -360,10 +368,10 @@
             transform: scale(1.05);
         }
 
-        /* Floating Widgets (Left Side, Stacked, Smaller) */
+        /* Floating Widgets */
         .floating-action {
             position: fixed;
-            left: 15px; /* Forced Left */
+            left: 15px;
             right: auto;
             width: 36px;
             height: 36px;
@@ -379,18 +387,8 @@
             animation: float-pulse 2s infinite;
         }
 
-        .float-wa { 
-            background-color: #25d366; 
-            bottom: 80px; 
-            animation-delay: 0s;
-        }
-        
-        .float-call { 
-            background-color: var(--primary-color); 
-            bottom: 130px; 
-            animation-delay: 1s;
-        }
-        
+        .float-wa { background-color: #25d366; bottom: 80px; animation-delay: 0s; }
+        .float-call { background-color: var(--primary-color); bottom: 130px; animation-delay: 1s; }
         .floating-action:hover { transform: scale(1.15); }
 
         /* Bottom Nav Bar (Mobile) */
@@ -438,10 +436,9 @@
             transform: translateY(-3px);
         }
 
-        /* Mobile Tweaks */
         @media (max-width: 768px) {
             .bottom-nav { display: flex; }
-            .logo h1 { font-size: 0.95rem; }
+            .logo h1 { font-size: 0.9rem; }
             .hero h2 { font-size: 1.5rem; }
             .hero p { font-size: 0.95rem; }
             .section-title { font-size: 1.5rem; }
@@ -459,10 +456,7 @@
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
-        .animate-up {
-            animation: fadeInUp 0.7s ease forwards;
-        }
+        .animate-up { animation: fadeInUp 0.7s ease forwards; }
 
         @keyframes float-pulse {
             0% { box-shadow: 0 0 0 0 rgba(0,0,0, 0.2); }
@@ -487,9 +481,7 @@
             <button class="icon-btn" id="theme-toggle" title="تغيير المظهر">
                 <i class="fas fa-moon"></i>
             </button>
-            <button class="icon-btn" id="lang-toggle" title="تغيير اللغة">
-                <i class="fas fa-globe"></i>
-            </button>
+            <button class="icon-btn" id="lang-toggle" title="تغيير اللغة">EN</button>
         </div>
     </header>
 
@@ -524,20 +516,21 @@
             </div>
             <div class="form-group">
                 <select id="custService" required>
-                    <option value="" disabled selected data-i18n="select_service">اختر الخدمة المطلوبة</option>
                     </select>
             </div>
             <div class="form-group">
                 <textarea id="custDetails" rows="4" data-i18n-placeholder="details" placeholder="تفاصيل الطلب" required></textarea>
             </div>
-            <button type="submit" class="btn" style="width: 100%;" data-i18n="send">إرسال عبر واتساب <i class="fab fa-whatsapp"></i></button>
+            <button type="submit" class="btn" style="width: 100%;">
+                <span data-i18n="send">إرسال عبر واتساب</span> <i class="fab fa-whatsapp"></i>
+            </button>
         </form>
     </section>
 
     <footer class="site-footer animate-up">
-        <p class="copyright-text">كافة الحقوق محفوظة لدى / رضا لخدمات تفصيل الخزائن والموبيليا 2026 &copy;</p>
+        <p class="copyright-text" data-i18n="copyright">كافة الحقوق محفوظة لدى / رضا لخدمات تفصيل الخزائن والموبيليا 2026 ©</p>
         <a href="https://wa.me/966547194788" target="_blank" class="dev-signature" title="تواصل مع المبرمج">
-            <i class="fas fa-crown"></i> تصميم مهندس | إسلام الشيخ <i class="fas fa-crown"></i>
+            <i class="fas fa-crown"></i> <span data-i18n="signature">تصميم مهندس | إسلام الشيخ</span> <i class="fas fa-crown"></i>
         </a>
     </footer>
 
@@ -559,12 +552,11 @@
         </a>
         <a href="#contact" class="nav-item">
             <div class="icon-circle"><i class="fas fa-envelope"></i></div>
-            <span data-i18n="contact">تواصل معنا</span>
+            <span data-i18n="contact">تواصل</span>
         </a>
     </nav>
 
     <script>
-        // --- Data & Translations ---
         const WHATSAPP_NUM = "966577343816";
 
         const i18n = {
@@ -580,11 +572,13 @@
                 phone: "رقم الجوال",
                 select_service: "اختر الخدمة المطلوبة",
                 details: "تفاصيل الطلب",
-                send: "إرسال",
+                send: "إرسال عبر واتساب",
                 home: "الرئيسية",
                 services: "الخدمات",
                 about: "من نحن",
-                contact: "تواصل معنا",
+                contact: "تواصل",
+                copyright: "كافة الحقوق محفوظة لدى / رضا لخدمات تفصيل الخزائن والموبيليا 2026 ©",
+                signature: "تصميم مهندس | إسلام الشيخ",
                 features: [
                     { title: "دقة في التنفيذ", desc: "نهتم بأدق التفاصيل لضمان خروج العمل بأفضل صورة، مع التزام تام بالمقاييس والمواصفات المتفق عليها لتحقيق رؤيتك بدقة متناهية.", icon: "fa-bullseye" },
                     { title: "إلتزام في مواعيد التسليم", desc: "نقدر وقتك الثمين، ولذلك نلتزم التزاماً صارماً بتسليم المشاريع في المواعيد المحددة دون أي تأخير، مع الحفاظ على أعلى معايير الجودة.", icon: "fa-clock" },
@@ -596,33 +590,55 @@
                     { title: "تفصيل خزائن", desc: "تصميم وتفصيل خزائن عملية وأنيقة تناسب مساحتك وتلبي احتياجات التخزين الخاصة بك. نستخدم أفضل الأخشاب والإكسسوارات لضمان جودة عالية وعمر طويل.", icon: "fa-box" },
                     { title: "تفصيل غرف نوم", desc: "نصنع لك غرف نوم تجمع بين الراحة والفخامة. تصاميم مخصصة تعكس ذوقك الشخصي مع اهتمام فائق بجودة الخشب والتشطيبات النهائية لنوم هانئ.", icon: "fa-bed" },
                     { title: "تفصيل غرف أطفال", desc: "غرف أطفال آمنة ومبهجة بألوان وتصاميم إبداعية تحفز خيال طفلك. نستخدم مواد غير سامة وحواف دائرية لضمان بيئة آمنة ومريحة لصغارك.", icon: "fa-child" },
-                    { title: "تفصيل غرف ملابس", desc: "دريسنج روم (Dressing Room) مصممة باحترافية لاستغلال كل زاوية. تنظيم مثالي للملابس والأحذية والإكسسوارات بتصاميم عصرية وإضاءة متناسقة.", icon: "fa-tshirt" },
+                    { title: "تفصيل غرف ملابس", desc: "دريسنج روم مصممة باحترافية لاستغلال كل زاوية. تنظيم مثالي للملابس والأحذية والإكسسوارات بتصاميم عصرية وإضاءة متناسقة.", icon: "fa-tshirt" },
                     { title: "تفصيل دواليب وغرف تخزين", desc: "حلول تخزين ذكية وعملية للمنازل والمكاتب. دواليب قوية ومتينة بأرفف قابلة للتعديل تناسب جميع الأغراض وتساعدك على تنظيم مساحتك بفعالية.", icon: "fa-archive" },
                     { title: "تفصيل ديكورات جدارية", desc: "لمسات خشبية فنية تحول جدران منزلك إلى تحف معمارية. تكسيات خشبية، أرفف ديكورية، وتصاميم جدارية مبتكرة تضفي الدفء والأناقة على المكان.", icon: "fa-layer-group" },
                     { title: "تصميم وتفصيل ديكور شاشات", desc: "وحدات تلفاز وشاشات عصرية تجمع بين الجمال والوظيفة. إخفاء ذكي للكابلات، ومساحات تخزين إضافية، وتصاميم تندمج مع ديكور صالتك بسلاسة.", icon: "fa-tv" },
                     { title: "تفصيل غرف عبايات", desc: "تصميم خاص وحصري لغرف وخزائن العبايات، مع مراعاة الطول والمساحة والتهوية، لتنظيم أنيق ومحافظة تامة على أقمشة العبايات القيمة.", icon: "fa-female" },
-                    { title: "تفصيل كافية كورنر", desc: "ركن قهوة (Coffee Corner) مصمم خصيصاً ليناسب مساحتك. أرفف للأكواب، أدراج للكبسولات، وتصميم خشبي دافئ يمنحك تجربة مقهى حقيقية في منزلك.", icon: "fa-coffee" },
+                    { title: "تفصيل كافية كورنر", desc: "ركن قهوة مصمم خصيصاً ليناسب مساحتك. أرفف للأكواب، أدراج للكبسولات، وتصميم خشبي دافئ يمنحك تجربة مقهى حقيقية في منزلك.", icon: "fa-coffee" },
                     { title: "تفصيل موبيليا", desc: "صناعة جميع أنواع الموبيليا والقطع الفردية حسب الطلب. طاولات طعام، كراسي، كونسول، وأي قطعة أثاث تحلم بها ننفذها بدقة وحرفية عالية.", icon: "fa-chair" },
                     { title: "تفصيل اثاث منزلي", desc: "تجهيز كامل للمنازل بأثاث متناسق وعالي الجودة. من غرف الاستقبال إلى المعيشة، نقدم حلولاً متكاملة تعكس الفخامة والرقي في كل زاوية.", icon: "fa-couch" }
                 ]
             },
             en: {
-                site_name: "Reda Carpentry & Furniture",
+                site_name: "Reda Carpentry & Furniture Services",
                 hero_desc: "Reda for Wardrobes & Furniture Tailoring is your first choice in Riyadh for carpentry, bedroom tailoring, wardrobes, and decor. We design and execute with the best materials, highest precision, guaranteed quality, and competitive prices.",
                 why_choose_us: "Why Choose Us?",
                 our_services: "Our Services",
                 service_area: "Service Area: Riyadh",
                 contact_us: "Contact Us",
-                order_service: "Order this service",
+                order_service: "Order Service",
                 name: "Name",
                 phone: "Phone Number",
                 select_service: "Select Service",
                 details: "Order Details",
-                send: "Send",
+                send: "Send via WhatsApp",
                 home: "Home",
                 services: "Services",
                 about: "About",
                 contact: "Contact",
+                copyright: "All rights reserved / Reda Carpentry Services 2026 ©",
+                signature: "Designed by Eng. Eslam Elshikh",
+                features: [
+                    { title: "Precision in Execution", desc: "We pay attention to the smallest details to ensure the work comes out perfectly, with strict adherence to agreed specifications.", icon: "fa-bullseye" },
+                    { title: "Strict Delivery Deadlines", desc: "We value your time, strictly committing to delivering projects on schedule without any delays while maintaining top quality.", icon: "fa-clock" },
+                    { title: "Quality Materials", desc: "We use the finest woods and materials in the market to ensure the durability and long lifespan of your furniture.", icon: "fa-gem" },
+                    { title: "Competitive Prices & Warranty", desc: "We offer the best value for money, providing a comprehensive warranty on all our work for your peace of mind.", icon: "fa-tags" }
+                ],
+                services_list: [
+                    { title: "Carpentry & Furniture Repair", desc: "Comprehensive maintenance services using the latest techniques to restore your favorite furniture to its original glory.", icon: "fa-wrench" },
+                    { title: "Wardrobe Tailoring", desc: "Designing practical and elegant wardrobes that fit your space and meet your storage needs perfectly.", icon: "fa-box" },
+                    { title: "Bedroom Tailoring", desc: "Custom-made bedrooms combining comfort and luxury, crafted with premium wood and finishing touches.", icon: "fa-bed" },
+                    { title: "Kids Room Tailoring", desc: "Safe and cheerful kids' rooms with creative designs and non-toxic materials for a secure environment.", icon: "fa-child" },
+                    { title: "Dressing Room Tailoring", desc: "Professionally designed dressing rooms to utilize every corner, providing perfect organization for clothes and shoes.", icon: "fa-tshirt" },
+                    { title: "Storage Rooms & Cabinets", desc: "Smart storage solutions with sturdy, adjustable shelves suitable for homes and offices.", icon: "fa-archive" },
+                    { title: "Wall Decor Customization", desc: "Artistic wooden touches that turn your walls into architectural masterpieces, adding warmth and elegance.", icon: "fa-layer-group" },
+                    { title: "TV Unit Decor", desc: "Modern TV units combining beauty and function with smart cable concealment and extra storage.", icon: "fa-tv" },
+                    { title: "Abaya Room Tailoring", desc: "Exclusive designs for Abaya closets, considering height, space, and ventilation for elegant organization.", icon: "fa-female" },
+                    { title: "Coffee Corner Customization", desc: "A cozy coffee corner designed specifically for your space, giving you a real café experience at home.", icon: "fa-coffee" },
+                    { title: "Custom Furniture Making", desc: "Crafting all types of furniture on demand; dining tables, chairs, consoles, executed with high craftsmanship.", icon: "fa-chair" },
+                    { title: "Home Furniture Tailoring", desc: "Complete home furnishing with coordinated, high-quality furniture reflecting luxury in every corner.", icon: "fa-couch" }
+                ]
             },
             fr: {
                 site_name: "Reda Menuiserie et Meubles",
@@ -631,25 +647,44 @@
                 our_services: "Nos Services",
                 service_area: "Zone de service: Riyad",
                 contact_us: "Contactez-nous",
-                order_service: "Commander ce service",
+                order_service: "Commander",
                 name: "Nom",
                 phone: "Téléphone",
                 select_service: "Choisir le service",
                 details: "Détails",
-                send: "Envoyer",
+                send: "Envoyer via WhatsApp",
                 home: "Accueil",
                 services: "Services",
                 about: "À propos",
-                contact: "Contact"
+                contact: "Contact",
+                copyright: "Tous droits réservés / Reda Menuiserie 2026 ©",
+                signature: "Conçu par Ing. Eslam Elshikh",
+                features: [
+                    { title: "Précision d'Exécution", desc: "Nous prêtons attention aux moindres détails pour garantir un travail parfait, dans le respect des spécifications.", icon: "fa-bullseye" },
+                    { title: "Délais de Livraison Stricts", desc: "Nous valorisons votre temps, en nous engageant à livrer les projets dans les délais sans aucun retard.", icon: "fa-clock" },
+                    { title: "Matériaux de Qualité", desc: "Nous utilisons les meilleurs bois et matériaux du marché pour assurer la durabilité de vos meubles.", icon: "fa-gem" },
+                    { title: "Prix Compétitifs et Garantie", desc: "Nous offrons le meilleur rapport qualité-prix, avec une garantie complète sur tous nos travaux.", icon: "fa-tags" }
+                ],
+                services_list: [
+                    { title: "Réparation de Menuiserie", desc: "Services d'entretien complets utilisant les dernières techniques pour restaurer vos meubles préférés.", icon: "fa-wrench" },
+                    { title: "Confection d'Armoires", desc: "Conception d'armoires pratiques et élégantes qui s'adaptent à votre espace et à vos besoins.", icon: "fa-box" },
+                    { title: "Confection de Chambres", desc: "Chambres sur mesure alliant confort et luxe, réalisées avec du bois de première qualité.", icon: "fa-bed" },
+                    { title: "Chambres d'Enfants", desc: "Chambres d'enfants sûres et gaies avec des designs créatifs et des matériaux non toxiques.", icon: "fa-child" },
+                    { title: "Dressing sur Mesure", desc: "Dressings conçus par des professionnels pour utiliser chaque coin, offrant une organisation parfaite.", icon: "fa-tshirt" },
+                    { title: "Salles de Stockage", desc: "Solutions de rangement intelligentes avec des étagères solides adaptées aux maisons et bureaux.", icon: "fa-archive" },
+                    { title: "Décoration Murale", desc: "Touches artistiques en bois qui transforment vos murs en chefs-d'œuvre architecturaux.", icon: "fa-layer-group" },
+                    { title: "Meubles TV", desc: "Unités TV modernes alliant beauté et fonction avec dissimulation intelligente des câbles.", icon: "fa-tv" },
+                    { title: "Confection Placard Abaya", desc: "Designs exclusifs pour les placards d'Abaya, en tenant compte de la hauteur et de l'espace.", icon: "fa-female" },
+                    { title: "Coin Café sur Mesure", desc: "Un coin café conçu spécifiquement pour votre espace, offrant une vraie expérience de café.", icon: "fa-coffee" },
+                    { title: "Fabrication de Meubles", desc: "Fabrication de tous types de meubles sur demande ; tables, chaises, exécutés avec grand savoir-faire.", icon: "fa-chair" },
+                    { title: "Ameublement Complet", desc: "Ameublement complet avec des meubles coordonnés de haute qualité reflétant le luxe.", icon: "fa-couch" }
+                ]
             }
         };
 
-        // Current State
         let currentLang = navigator.language.startsWith('ar') ? 'ar' : 'en';
         let currentTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
-        // --- Core Functions ---
-        
         function init() {
             setTheme(currentTheme);
             setLang(currentLang);
@@ -668,6 +703,12 @@
             document.documentElement.lang = lang;
             document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
             
+            // Update button text to show NEXT language
+            const langBtn = document.getElementById('lang-toggle');
+            if (lang === 'ar') langBtn.innerText = 'EN';
+            else if (lang === 'en') langBtn.innerText = 'FR';
+            else if (lang === 'fr') langBtn.innerText = 'AR';
+            
             // Translate static text
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
@@ -684,11 +725,10 @@
         }
 
         function renderDynamicContent(lang) {
-            const data = i18n[lang] || i18n['ar']; 
-            const featuresData = data.features || i18n['ar'].features;
-            const servicesData = data.services_list || i18n['ar'].services_list;
+            const data = i18n[lang]; 
+            const featuresData = data.features;
+            const servicesData = data.services_list;
 
-            // Render Features
             const featuresContainer = document.getElementById('features-container');
             featuresContainer.innerHTML = featuresData.map((f, i) => `
                 <div class="feature-card animate-up" style="animation-delay: ${i * 0.1}s">
@@ -698,16 +738,14 @@
                 </div>
             `).join('');
 
-            // Render Services & Dropdown
             const servicesContainer = document.getElementById('services-container');
             const selectContainer = document.getElementById('custService');
             
             let servicesHTML = '';
-            let selectHTML = `<option value="" disabled selected>${i18n[lang].select_service || i18n['ar'].select_service}</option>`;
+            let selectHTML = `<option value="" disabled selected>${data.select_service}</option>`;
 
             servicesData.forEach((s, i) => {
-                const orderText = i18n[lang].order_service || i18n['ar'].order_service;
-                const waLink = `https://wa.me/${WHATSAPP_NUM}?text=${encodeURIComponent('مرحباً، أود الاستفسار عن خدمة: ' + s.title)}`;
+                const waLink = `https://wa.me/${WHATSAPP_NUM}?text=${encodeURIComponent(data.order_service + ': ' + s.title)}`;
                 
                 servicesHTML += `
                     <div class="service-card animate-up" style="animation-delay: ${i * 0.05}s">
@@ -716,7 +754,7 @@
                         </div>
                         <h3>${s.title}</h3>
                         <p>${s.desc}</p>
-                        <a href="${waLink}" target="_blank" class="btn">${orderText}</a>
+                        <a href="${waLink}" target="_blank" class="btn">${data.order_service}</a>
                     </div>
                 `;
                 selectHTML += `<option value="${s.title}">${s.title}</option>`;
@@ -727,18 +765,15 @@
         }
 
         function setupEventListeners() {
-            // Theme Toggle
             document.getElementById('theme-toggle').addEventListener('click', () => {
                 setTheme(currentTheme === 'dark' ? 'light' : 'dark');
             });
 
-            // Lang Toggle
             document.getElementById('lang-toggle').addEventListener('click', () => {
                 const nextLang = currentLang === 'ar' ? 'en' : (currentLang === 'en' ? 'fr' : 'ar');
                 setLang(nextLang);
             });
 
-            // WhatsApp Form Submit
             document.getElementById('contactForm').addEventListener('submit', (e) => {
                 e.preventDefault();
                 const name = document.getElementById('custName').value;
@@ -746,13 +781,16 @@
                 const service = document.getElementById('custService').value;
                 const details = document.getElementById('custDetails').value;
 
-                const message = `مرحباً رضا لخدمات تفصيل الخزائن،\n\nالاسم: ${name}\nالجوال: ${phone}\nالخدمة: ${service}\nالتفاصيل: ${details}`;
+                // Adjust generic message start based on language
+                let msgPrefix = currentLang === 'ar' ? 'مرحباً رضا لخدمات تفصيل الخزائن،\n\n' : 
+                               (currentLang === 'en' ? 'Hello Reda Carpentry,\n\n' : 'Bonjour Reda Menuiserie,\n\n');
+
+                const message = `${msgPrefix}${i18n[currentLang].name}: ${name}\n${i18n[currentLang].phone}: ${phone}\n${i18n[currentLang].select_service}: ${service}\n${i18n[currentLang].details}: ${details}`;
                 const waUrl = `https://wa.me/${WHATSAPP_NUM}?text=${encodeURIComponent(message)}`;
                 window.open(waUrl, '_blank');
             });
         }
 
-        // Run Initialization
         init();
 
     </script>

@@ -22,12 +22,12 @@
 ---
 
 ## 👨‍💻 المطور (Developer)
-تم التصميم والتطوير بواسطة: 
+تم التصميم والتطوير بواسطة:
 **م. إسلام الشيخ (Eng. Eslam Elshikh)**
 *مهندس أمن سيبراني ومطور واجهات، وخبير منتجات جوجل معتمد (Google Products Expert).*
 
 🔗 **روابط التواصل:**
-- 🌐 [الموقع الرسمي](https://eslam-elshikh.com)
+- 🌐 [الموقع الرسمي](https://www.eslam-elshikh.com/)
 - 📝 [المدونة التقنية](https://blog.eslam-elshikh.com)
-- 📱 [واتساب للتواصل المباشر](https://wa.me/966547194788)
+- 📱 [واتساب للتواصل المباشر](https://www.eslam-elshikh.com/)
 - 💻 حسابات السوشيال ميديا: [@remoesoo10](https://x.com/remoesoo10)
